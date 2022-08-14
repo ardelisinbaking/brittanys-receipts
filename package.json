@@ -1,0 +1,19 @@
+{
+  "name": "brittanys-receipts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "brittanys-receipts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardelisinbaking/brittanys-receipts.git"
+  },
+  "author": "ardelis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ardelisinbaking/brittanys-receipts/issues"
+  },
+  "homepage": "https://github.com/ardelisinbaking/brittanys-receipts#readme"
+}
