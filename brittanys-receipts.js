@@ -1,4 +1,4 @@
-const province = {
+const TAX_BY_PROVINCE = {
   bc: {
     tax: 12,
     location: "BC",
@@ -23,7 +23,9 @@ const logger = function (actualTax, total, price, province) {
   `);
 };
 const taxCalculator = function (price, province) {
-  let actualTax = price * (province.tax / 100);
+  let _province = TAX_BY_PROVINCE[province];
+
+  let actualTax = price * (_province.tax / 100);
   let total = price + actualTax;
   return {
     actualTax,
@@ -33,5 +35,9 @@ const taxCalculator = function (price, province) {
   };
 };
 
-const result = taxCalculator(42.98, province["bc"]);
-logger(result.actualTax, result.total, result.price, result.province.location);
+module.exports = {
+  taxCalculator,
+};
+
+// const result = taxCalculator(42.98, province["bc"]);
+// logger(result.actualTax, result.total, result.price, result.province.location);
