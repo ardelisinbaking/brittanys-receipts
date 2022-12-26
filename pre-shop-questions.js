@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 const questions = [
-    "What pieces you looking for?\n",
+    "What pieces are you looking for?\n",
     "What is your budget for today?\n",
     "Are there any stores in particular you would like to shop?\n",
 ];
@@ -23,8 +23,9 @@ const collectAnswers = (questions, done) => {
 };
 
 collectAnswers(questions, answers => {
-    console.log("To review our mission:");
+    console.log("\nTo review our mission:");
     console.log(`We are looking for ${answers[0]} with a spend under ${answers[1]}.`);
     console.log(`First stop ${answers[2]}. Lets go shopping!`);
     process.exit();
 });
+//adds a semicolon and minor mistype
