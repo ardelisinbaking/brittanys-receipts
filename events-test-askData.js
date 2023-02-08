@@ -15,7 +15,8 @@ const askDate = function(){
 };
 
 const askActivity = () => {
-    process.stdout.write(`Thank you {identify user}. Please list the activity you are registering for.\n\n`);
+    const id = users.length -1;
+    process.stdout.write(`Thank you ${users[id]}. Please list the activity you are registering for.\n\n`);
     process.stdin.on('data', data => {
         activityList.length == dates.length ?
         activityList.push(data.toString().trim()) && askDate() :
